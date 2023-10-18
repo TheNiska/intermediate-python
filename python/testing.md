@@ -1,3 +1,8 @@
+## Stages of TDD (test driven development)
+1. Writing tests.
+2. Writing the code.
+3. Ractoring if the code fails. Writing another tests.
+
 ## Nomenclature
 
 - Add suffix 'test_' to the file that needs to be tested. 
@@ -22,14 +27,14 @@ For example, -v is the flag:
 
 ## Some other flag options are:
 
--v for verbose 
--q quiet mode 
--s allows the print statement inside the functions to be executed 
--x is to flag the tests to stop execution after first failure 
--m is used to mark a specific function 
--k is a flag for searching and running tests with a specific keyword 
---tb is to disable the traceback code of errors 
---maxfail n specifies maximum number of test fails allowed 
+- -v for verbose  
+- -q quiet mode  
+- -s allows the print statement inside the functions to be executed  
+- -x is to flag the tests to stop execution after first failure  
+- -m is used to mark a specific function  
+- -k is a flag for searching and running tests with a specific keyword  
+- --tb is to disable the traceback code of errors  
+- --maxfail n specifies maximum number of test fails allowed  
 
 ## Tips
 The rule of thumb is that the assert statement looks for a Boolean result. You can use in, not in, is, <, >, other than == to check Boolean values. 
