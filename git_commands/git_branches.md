@@ -16,7 +16,9 @@ renaming a remote branch:
    first, delete the old one: ___git push origin --delete (old-name)___  
    then, push the new one: ___git push -u origin (new-name)___
 
-publishing a branch: ___git push -u origin (local-branch-name)___
+publishing a branch: ___git push -u origin (local-branch-name)___  
+this creates a new remote branch based on a local branch.  
+
 
 tracking a remote branch: ___git checkout --track origin/(remote-name)___  
 this allows us to easily use __git pull__ and __git push__
