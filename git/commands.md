@@ -10,7 +10,13 @@
 
 - __git remote -v__ -- shows origins of this repository.  
 - __git remote add origin 'remore-repo-address'__ -- adding origin. Usually for a new repo created locally.  
-- 
+- __git log --pretty=oneline__ -- printing commits in one line.  
+- __git diff HEAD filename.txt__ -- printing difference between HEAD and uncommited changes.  
+- __git diff hash1 hash2__ -- printing difference between two commits.  
+- __git diff branch1 branch2__ -- printing difference between branches.  
+- __git blame filename data__ -- printing info about changes and authors.  
+
+
 
 # Git workflow
 1. Modified
