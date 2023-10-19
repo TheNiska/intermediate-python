@@ -33,3 +33,22 @@ merging branches:
 
 comparing branches: ___git log (branch-name1) (branch-name2)___
 
+# Freature branch workflow
+The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.  
+
+### Usually it consists of these steps:  
+1. git checkout -b new-feature
+2. git add <some-file>
+3. git commit -m "message"
+4. git push -u origin new-feature
+
+
+
+
+
+
+
+
+
+
+
