@@ -23,12 +23,12 @@ def inorderTraversal(root: Optional[TreeNode]) -> list[int]:
         return result
 
     if root.left:
-        result += self.inorderTraversal(root.left)
+        result += inorderTraversal(root.left)
 
     result += [root.val]
 
     if root.right:
-        result += self.inorderTraversal(root.right)
+        result += inorderTraversal(root.right)
 
     return result
 

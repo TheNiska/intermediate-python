@@ -11,4 +11,5 @@
 - REVOKE Command to remove permissions from any user.
 - COMMIT Command to save all the work you have already done in the database.
 - ROLLBACK Command to restore a database to the last committed state.
+- INSERT INTO table_name (column_name) SELECT column_name2 FROM table_name2; -- inserting column from one table to another.  
 
