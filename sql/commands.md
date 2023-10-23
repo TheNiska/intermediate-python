@@ -13,3 +13,10 @@
 - ROLLBACK Command to restore a database to the last committed state.
 - INSERT INTO table_name (column_name) SELECT column_name2 FROM table_name2; -- inserting column from one table to another.  
 
+## Arithmetic operators examples
+- SELECT column_name1 + column_name2 FROM table_name;  
+- SELECT * FROM employee WHERE salary - tax = 50000;  
+
+## Filternig data
+- SELECT column1, column2, columnN FROM table_name WHERE [condition1] AND [condition2]...AND [conditionN];  
+- SELECT DISTINCT BillingCountry FROM invoices ORDER BY BillingCountry;  
