@@ -9,4 +9,14 @@
 4. Data Control Language (__DCL__) -- You use DCL to deal with the rights and permissions of users of a database system.  
 5. Transaction Control Language (__TCL__) -- The TCL commands are used to manage transactions in the database. These are used to manage the changes made to the data in a table by utilizing the DML commands.  
 
+# Data normalization
+### First normal form
+The first normal form enforces data atomicity and eliminates unnecessary repeating data groups. A table can only have one single instance value of the column attribute in any table cell.  
+
+### Second normal form
+In the second normal form, you must avoid partial dependency relationships between data. Partial dependency refers to tables with a composite primary key. Namely, a key that consists of a combination of two or more columns, where a non-key attribute value depends only on one part of the composite key.  
+
+### Third normal form
+The third normal form states that a table must have no transitive dependency. This means that any non-key attribute in a table may not be functionally dependent on another non-key attribute in the same table.  
+
 
