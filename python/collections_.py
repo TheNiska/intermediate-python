@@ -5,7 +5,7 @@ from collections import UserDict
 class Sentence(Sequence):
     '''This inheritance adds additions functionality'''
 
-    def __init__(self, source):
+    def __init__(self, source: str):
         self.text = source.strip().lower()
         self.words = self.text.split(' ')
 
