@@ -1,6 +1,6 @@
 from collections import namedtuple
 from typing import NamedTuple, get_type_hints
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, InitVar
 
 # Best way to get type hints: get_type_hints(...)
 
@@ -70,6 +70,20 @@ class Member:
     name: str
     numbers: list[int] = field(default_factory=list)
 
+    all_handles: InitVar[set] = set()  # init var that is not a field
+    handle: str = ''
+
+    def __post_init__(self, all_handles):
+        this_cls = self.__class__
+        if self.handle == '':
+            self.handle = self.name.split()[0]
+
+        if self.handle in this_cls.all_handles:
+            msg = f"handle {self.handle!r} already exists."
+            raise ValueError(msg)
+
+        this_cls.all_handles.add(self.handle)
+
 
 def main():
     init_classes = '''\
@@ -89,7 +103,7 @@ def main():
         if i <= 3:
             member = Member(f"member{i}")
         else:
-            member = Member(f"member{i}", list(range(i)))
+            member = Member(f"member{i}", list(range(i)), handle=str(i))
         print(member)
 
 
