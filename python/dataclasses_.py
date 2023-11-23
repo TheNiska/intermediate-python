@@ -1,6 +1,6 @@
 from collections import namedtuple
 from typing import NamedTuple, get_type_hints
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 # Best way to get type hints: get_type_hints(...)
 
@@ -64,6 +64,13 @@ class Coordinate_DataClass:
         return f'{abs(self.lat):.1f}°{ns}, {abs(self.lon):.1f}°{we}'
 
 
+@dataclass
+class Member:
+    '''Initializing default value for mutable'''
+    name: str
+    numbers: list[int] = field(default_factory=list)
+
+
 def main():
     init_classes = '''\
     Coordinate_namedtuple(15.2, 18.4)
@@ -78,18 +85,13 @@ def main():
         left, right = 17, class_name.rfind("'")
         print(f"{class_name[left:right]:-<30}{obj}")
 
+    for i in range(10):
+        if i <= 3:
+            member = Member(f"member{i}")
+        else:
+            member = Member(f"member{i}", list(range(i)))
+        print(member)
+
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
